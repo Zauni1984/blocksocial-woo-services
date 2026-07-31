@@ -1,0 +1,50 @@
+.bwes-wrap .bwes-modules-table td {
+	vertical-align: top;
+}
+
+.bwes-modules-table .bwes-module-toggle {
+	width: 260px;
+}
+
+.bwes-roles {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.25em 1.25em;
+	max-width: 640px;
+}
+
+.bwes-role {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.35em;
+	min-width: 180px;
+}
+
+.bwes-options-table {
+	max-width: 900px;
+	margin-bottom: 0.5em;
+}
+
+.bwes-options-table th,
+.bwes-options-table td {
+	padding: 6px 8px;
+}
+
+.bwes-options-table input[type="text"] {
+	width: 100%;
+}
+
+.bwes-options-table input.small-text {
+	width: 80px;
+}
+
+.bwes-remove-option {
+	color: #b32d2e;
+	text-decoration: none;
+	font-size: 18px;
+	line-height: 1;
+}
+
+.bwes-delete {
+	color: #b32d2e;
+}
