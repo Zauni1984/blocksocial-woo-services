@@ -32,6 +32,14 @@ class BWES_Frontend {
 	private $services;
 
 	/**
+	 * Map of fee line label => metadata, built while adding fees so the created
+	 * order fee items can be tagged (e.g. for invoices / Germanized).
+	 *
+	 * @var array<string,array>
+	 */
+	private $fee_meta_map = array();
+
+	/**
 	 * Constructor.
 	 *
 	 * @param BWES_Modules  $modules  Modules registry.
@@ -70,6 +78,10 @@ class BWES_Frontend {
 		// Validate + persist on checkout.
 		add_action( 'woocommerce_checkout_process', array( $this, 'validate_checkout' ) );
 		add_action( 'woocommerce_checkout_create_order', array( $this, 'save_to_order' ), 10, 2 );
+
+		// Tag the created order fee line items so the fee (and any message) is
+		// clearly attributed on the order and on invoices (e.g. Germanized).
+		add_action( 'woocommerce_checkout_create_order_fee_item', array( $this, 'tag_fee_item' ), 10, 4 );
 
 		// Show the choices on the order / emails / admin.
 		add_action( 'woocommerce_order_details_after_order_table', array( $this, 'render_order_details' ) );
@@ -337,6 +349,10 @@ class BWES_Frontend {
 
 		$available  = $this->services->get_available_for_current_user( $cart );
 		$selections = $this->get_selections();
+		$messages   = $this->get_messages();
+
+		// Reset the per-request map that links fee lines back to services.
+		$this->fee_meta_map = array();
 
 		foreach ( $available as $id => $service ) {
 			$selection = isset( $selections[ $id ] ) ? $selections[ $id ] : null;
@@ -359,6 +375,44 @@ class BWES_Frontend {
 				(bool) $service['taxable'],
 				$service['taxable'] ? $service['tax_class'] : ''
 			);
+
+			// Remember how to tag the resulting order fee item.
+			$this->fee_meta_map[ $label ] = array(
+				'service_id'    => $id,
+				'message'       => ( ! empty( $service['collect_message'] ) && ! empty( $messages[ $id ] ) ) ? $messages[ $id ] : '',
+				'message_label' => '' !== $service['message_label'] ? $service['message_label'] : __( 'Message', 'bwes' ),
+			);
+		}
+	}
+
+	/**
+	 * Attach service metadata to the order fee line item during checkout.
+	 *
+	 * The fee itself is already a real order line (created by WooCommerce from
+	 * the cart fee), so it appears on invoices — including Germanized invoices —
+	 * automatically. This additionally stores a hidden service reference and, if
+	 * present, renders the customer's message as visible meta beneath the line.
+	 *
+	 * @param WC_Order_Item_Fee $item    The order fee item being created.
+	 * @param string            $fee_key The cart fee key.
+	 * @param object            $fee     The cart fee object.
+	 * @param WC_Order          $order   The order being created.
+	 * @return void
+	 */
+	public function tag_fee_item( $item, $fee_key, $fee, $order ) {
+		$name = isset( $fee->name ) && '' !== $fee->name ? $fee->name : $item->get_name();
+		if ( ! isset( $this->fee_meta_map[ $name ] ) ) {
+			return;
+		}
+
+		$info = $this->fee_meta_map[ $name ];
+
+		// Hidden reference (underscore-prefixed keys are not shown to customers).
+		$item->add_meta_data( '_bwes_service_id', $info['service_id'], true );
+
+		// Visible message (e.g. gift message) so it prints on the invoice/email.
+		if ( '' !== $info['message'] ) {
+			$item->add_meta_data( $info['message_label'], $info['message'], true );
 		}
 	}
 

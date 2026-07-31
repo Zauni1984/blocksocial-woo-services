@@ -38,6 +38,12 @@ der Browser kann nur den *Schlüssel* einer Auswahl senden, niemals einen Preis.
 - **Anzeigeort** wählbar: Warenkorb, Kasse oder beides.
 - **Bestellübernahme**: Gewählte Services werden an der Bestellung gespeichert
   und in Bestellübersicht, E-Mails und im Admin-Bereich angezeigt.
+- **Rechnungen / Germanized**: Jede Gebühr wird als echte Bestellposition
+  (`WC_Order_Item_Fee`) mit Name, Betrag und Steuer angelegt und erscheint
+  dadurch automatisch auf Rechnungen – auch auf denen von WooCommerce
+  Germanized (inkl. Germanized Pro PDF-Rechnungen). Die Fee-Position wird
+  zusätzlich mit einer Service-Referenz getaggt; eine Kundennachricht (z. B.
+  Geschenktext) wird als sichtbares Positions-Meta unter der Gebühr ausgegeben.
 - **HPOS-kompatibel** (High-Performance Order Storage) und kompatibel erklärt
   für Cart-/Checkout-Blocks.
 
