@@ -71,6 +71,10 @@ class BWES_Frontend {
 		// Fee application — the single source of truth for pricing.
 		add_action( 'woocommerce_cart_calculate_fees', array( $this, 'add_fees' ), 20 );
 
+		// Local pickup (and any "suppress shipping" service) removes shipping costs.
+		add_filter( 'woocommerce_cart_shipping_packages', array( $this, 'tag_shipping_packages' ) );
+		add_filter( 'woocommerce_package_rates', array( $this, 'maybe_suppress_shipping' ), 100, 2 );
+
 		// AJAX (logged-in + guests).
 		add_action( 'wp_ajax_bwes_update_selections', array( $this, 'ajax_update_selections' ) );
 		add_action( 'wp_ajax_nopriv_bwes_update_selections', array( $this, 'ajax_update_selections' ) );
@@ -414,6 +418,80 @@ class BWES_Frontend {
 		if ( '' !== $info['message'] ) {
 			$item->add_meta_data( $info['message_label'], $info['message'], true );
 		}
+	}
+
+	/**
+	 * Return the currently selected service that suppresses shipping (e.g. local
+	 * pickup), or null when none is active.
+	 *
+	 * @return array|null
+	 */
+	private function get_active_shipping_suppressor() {
+		if ( ! WC()->cart ) {
+			return null;
+		}
+
+		$available  = $this->services->get_available_for_current_user( WC()->cart );
+		$selections = $this->get_selections();
+
+		foreach ( $available as $id => $service ) {
+			if ( empty( $service['suppress_shipping'] ) ) {
+				continue;
+			}
+			$selection = $this->sanitize_selection( $service, isset( $selections[ $id ] ) ? $selections[ $id ] : null );
+			if ( null !== $selection && '' !== $selection ) {
+				return $service;
+			}
+		}
+
+		return null;
+	}
+
+	/**
+	 * Make shipping packages depend on the pickup selection so WooCommerce
+	 * invalidates its cached rates whenever the customer toggles it.
+	 *
+	 * @param array $packages Shipping packages.
+	 * @return array
+	 */
+	public function tag_shipping_packages( $packages ) {
+		$flag = $this->get_active_shipping_suppressor() ? 1 : 0;
+
+		if ( is_array( $packages ) ) {
+			foreach ( $packages as $key => $package ) {
+				$packages[ $key ]['bwes_suppress_shipping'] = $flag;
+			}
+		}
+
+		return $packages;
+	}
+
+	/**
+	 * When a shipping-suppressing service (local pickup) is selected, replace the
+	 * available shipping rates with a single zero-cost pickup rate so no shipping
+	 * cost is charged.
+	 *
+	 * @param array $rates   Available rates.
+	 * @param array $package Shipping package.
+	 * @return array
+	 */
+	public function maybe_suppress_shipping( $rates, $package ) {
+		$service = $this->get_active_shipping_suppressor();
+		if ( null === $service ) {
+			return $rates;
+		}
+
+		$label = '' !== $service['title'] ? $service['title'] : __( 'Local pickup', 'bwes' );
+
+		$rate = new WC_Shipping_Rate(
+			'bwes_pickup',
+			$label,
+			0.0,
+			array(),
+			'bwes_pickup'
+		);
+
+		return array( 'bwes_pickup' => $rate );
 	}
 
 	/**

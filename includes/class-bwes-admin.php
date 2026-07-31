@@ -541,6 +541,16 @@ class BWES_Admin {
 		}
 		echo '</select></td></tr>';
 
+		// Suppress shipping (local pickup).
+		echo '<tr><th scope="row">' . esc_html__( 'Shipping', 'bwes' ) . '</th><td>';
+		printf(
+			'<label><input type="checkbox" name="service[suppress_shipping]" value="1" %s /> %s</label>',
+			checked( ! empty( $service['suppress_shipping'] ), true, false ),
+			esc_html__( 'Selecting this option removes all shipping costs (e.g. local pickup)', 'bwes' )
+		);
+		echo '<p class="description">' . esc_html__( 'When selected at checkout, shipping rates are replaced by a single free option. Any fee configured above still applies.', 'bwes' ) . '</p>';
+		echo '</td></tr>';
+
 		// Gift message.
 		echo '<tr><th scope="row">' . esc_html__( 'Message field', 'bwes' ) . '</th><td>';
 		printf(
@@ -673,6 +683,7 @@ class BWES_Admin {
 			'enabled'         => ! empty( $raw['enabled'] ),
 			'collect_message' => ! empty( $raw['collect_message'] ),
 			'message_label'   => isset( $raw['message_label'] ) ? sanitize_text_field( $raw['message_label'] ) : '',
+			'suppress_shipping' => ! empty( $raw['suppress_shipping'] ),
 			'position'        => isset( $raw['position'] ) ? absint( $raw['position'] ) : 100,
 			'allowed_roles'   => isset( $raw['allowed_roles'] ) ? (array) $raw['allowed_roles'] : array(),
 			'options'         => $this->collect_options_from_post( isset( $raw['type'] ) ? sanitize_key( $raw['type'] ) : 'checkbox' ),

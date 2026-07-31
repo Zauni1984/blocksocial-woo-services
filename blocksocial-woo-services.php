@@ -3,7 +3,7 @@
  * Plugin Name:       BlockSocial WooCommerce Extra Services
  * Plugin URI:        https://blocksocial.de/plugins/woo-extra-services
  * Description:        Adds paid extra shipping options and services (gift wrapping, express, carrier choice, pickup, local radius delivery and custom services) that customers can select in the cart or at checkout. Fully modular, role-aware and security hardened.
- * Version:           1.0.0
+ * Version:           1.1.0
  * Requires at least: 6.0
  * Requires PHP:      7.4
  * Author:            BlockSocial UG (haftungsbeschränkt)
@@ -21,7 +21,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'BWES_VERSION', '1.0.0' );
+define( 'BWES_VERSION', '1.1.0' );
 define( 'BWES_PLUGIN_FILE', __FILE__ );
 define( 'BWES_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'BWES_PLUGIN_URL', plugin_dir_url( __FILE__ ) );

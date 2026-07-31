@@ -19,7 +19,7 @@ der Browser kann nur den *Schlüssel* einer Auswahl senden, niemals einen Preis.
 | **Als Geschenk verpacken** | Geschenkverpackung gegen Gebühr, optional mit persönlicher Nachricht. |
 | **Express & Priorität** | Schnellere Lieferstufen (z. B. Express) gegen Aufpreis. |
 | **Versanddienstleister-Wahl** | Kunde wählt den bevorzugten Carrier (z. B. **DHL statt DPD**), jeweils mit eigenem Aufpreis. |
-| **Abholung** | Selbstabholung als wählbare Option – **mit oder ohne Gebühr**. |
+| **Abholung** | Selbstabholung als wählbare Option – **mit oder ohne Gebühr**. Bei Auswahl werden die **Versandkosten auf 0 gesetzt** (nur eine kostenfreie Abhol-Option bleibt). |
 | **Lieferung im Umkreis** | Liefergebühr nach Entfernung zum Ladengeschäft (**km-Radius-Stufen**): bis 5 km Gebühr X, bis 10 km Gebühr Y usw. |
 | **Eigene Services** | Beliebige eigene Services / Versandextras **manuell anlegen**. |
 

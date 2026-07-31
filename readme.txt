@@ -4,7 +4,7 @@ Tags: woocommerce, shipping, checkout, fees, gift wrapping, express, pickup, loc
 Requires at least: 6.0
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 
@@ -68,6 +68,13 @@ Yes. Each service has a "Visible to roles" setting. Leave it empty for everyone,
 or pick specific roles (including the virtual "Guest" role).
 
 == Changelog ==
+
+= 1.1.0 =
+* Local pickup (and any service flagged "removes shipping costs") now sets the
+  shipping cost to zero when selected, replacing the shipping rates with a
+  single free pickup option. Any configured pickup fee still applies.
+* Fees are tagged onto the order fee line items so they appear correctly on
+  invoices (including Germanized), with the customer message shown beneath.
 
 = 1.0.0 =
 * Initial release.
