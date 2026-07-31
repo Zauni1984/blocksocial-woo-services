@@ -20,7 +20,7 @@ der Browser kann nur den *Schlüssel* einer Auswahl senden, niemals einen Preis.
 | **Express & Priorität** | Schnellere Lieferstufen (z. B. Express) gegen Aufpreis. |
 | **Versanddienstleister-Wahl** | Kunde wählt den bevorzugten Carrier (z. B. **DHL statt DPD**), jeweils mit eigenem Aufpreis. |
 | **Abholung** | Selbstabholung als wählbare Option – **mit oder ohne Gebühr**. Bei Auswahl werden die **Versandkosten auf 0 gesetzt** (nur eine kostenfreie Abhol-Option bleibt). |
-| **Lieferung im Umkreis** | Liefergebühr nach Entfernung zum Ladengeschäft (**km-Radius-Stufen**): bis 5 km Gebühr X, bis 10 km Gebühr Y usw. |
+| **Lieferung im Umkreis** | Liefergebühr nach Entfernung zum Ladengeschäft (**km-Radius-Stufen**): bis 5 km Gebühr X, bis 10 km Gebühr Y usw. **Exklusiv**: deaktiviert bei Auswahl alle anderen Services und die normalen Versandkosten; Hinweis zur Adresseingabe inklusive. |
 | **Eigene Services** | Beliebige eigene Services / Versandextras **manuell anlegen**. |
 
 ### Weitere Kernpunkte
@@ -46,6 +46,13 @@ der Browser kann nur den *Schlüssel* einer Auswahl senden, niemals einen Preis.
   Geschenktext) wird als sichtbares Positions-Meta unter der Gebühr ausgegeben.
 - **HPOS-kompatibel** (High-Performance Order Storage) und kompatibel erklärt
   für Cart-/Checkout-Blocks.
+- **Exklusive Services**: Ein als „exklusiv" markierter Service (z. B. lokale
+  Lieferung) deaktiviert bei Auswahl alle anderen Services – im UI ausgegraut
+  und serverseitig erzwungen.
+- **Mehrsprachig**: Übersetzungsvorlage (`languages/bwes.pot`) plus fertige
+  Übersetzungen für **Deutsch, Französisch und Italienisch**. Das Plugin folgt
+  automatisch der WordPress-Sprache; auch die Standard-Service-Bezeichnungen
+  werden lokalisiert.
 
 ---
 
@@ -88,6 +95,7 @@ includes/
   class-bwes-frontend.php         Rendering, AJAX, Fees, Bestellspeicherung
   class-bwes-admin.php            Admin-Oberfläche (Module, Services)
 assets/                           JS/CSS für Front- und Backend
+languages/                        bwes.pot + de_DE / fr_FR / it_IT (.po/.mo)
 ```
 
 Ein „**Service**“ ist eine einzelne wählbare Option (Checkbox, Auswahl/Radio

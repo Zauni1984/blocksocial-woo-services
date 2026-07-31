@@ -75,8 +75,33 @@
 		} );
 	}
 
+	/**
+	 * When an "exclusive" service (e.g. local delivery) is selected, disable all
+	 * other services so they can't be combined with it.
+	 */
+	function applyExclusivity() {
+		var $exclusive = $( '#bwes-services .bwes-service[data-exclusive="1"]' ).filter( function () {
+			return $( this ).find( 'input.bwes-input:checked' ).length > 0;
+		} );
+		var active = $exclusive.length > 0;
+
+		$( '#bwes-services .bwes-service' ).each( function () {
+			var $service = $( this );
+			var isActiveOne = $exclusive.is( $service );
+
+			if ( active && ! isActiveOne ) {
+				$service.addClass( 'bwes-service--disabled' )
+					.find( 'input, textarea, select' ).prop( 'disabled', true );
+			} else {
+				$service.removeClass( 'bwes-service--disabled' )
+					.find( 'input, textarea, select' ).prop( 'disabled', false );
+			}
+		} );
+	}
+
 	// Immediate save + recalculation on checkbox / radio change (affects price).
 	$( document ).on( 'change', '#bwes-services .bwes-input', function () {
+		applyExclusivity();
 		save( true );
 	} );
 
@@ -87,4 +112,8 @@
 			save( false );
 		}, 600 );
 	} );
+
+	// Re-apply after the checkout fragment is re-rendered, and on initial load.
+	$( document.body ).on( 'updated_checkout updated_cart_totals', applyExclusivity );
+	$( applyExclusivity );
 } )( jQuery );

@@ -148,16 +148,19 @@ class BWES_Services {
 				'position'          => 40,
 			),
 			'local_radius' => array(
-				'module'        => 'local_radius',
-				'title'         => __( 'Local delivery by distance', 'bwes' ),
-				'description'   => __( 'We deliver locally. The fee depends on the distance to your address.', 'bwes' ),
-				'type'          => 'radius',
-				'fee'           => 0,
-				'fee_type'      => 'flat',
-				'taxable'       => true,
-				'tax_class'     => '',
-				'allowed_roles' => array(),
-				'options'       => array(
+				'module'            => 'local_radius',
+				'title'             => __( 'Local delivery by distance', 'bwes' ),
+				'description'       => __( 'We deliver locally. The fee depends on the distance to your address.', 'bwes' ),
+				'type'              => 'radius',
+				'fee'               => 0,
+				'fee_type'          => 'flat',
+				'taxable'           => true,
+				'tax_class'         => '',
+				'allowed_roles'     => array(),
+				'suppress_shipping' => true,
+				'exclusive'         => true,
+				'hint'              => __( 'Please enter your delivery address at checkout to see the delivery fee.', 'bwes' ),
+				'options'           => array(
 					array(
 						'key'    => 'tier-5',
 						'label'  => __( 'Up to 5 km', 'bwes' ),
@@ -396,7 +399,11 @@ class BWES_Services {
 			'message_label'   => isset( $service['message_label'] ) ? sanitize_text_field( $service['message_label'] ) : '',
 			'suppress_shipping' => array_key_exists( 'suppress_shipping', $service )
 				? ! empty( $service['suppress_shipping'] )
-				: ( 'pickup' === $module ),
+				: in_array( $module, array( 'pickup', 'local_radius' ), true ),
+			'exclusive'       => array_key_exists( 'exclusive', $service )
+				? ! empty( $service['exclusive'] )
+				: ( 'local_radius' === $module ),
+			'hint'            => isset( $service['hint'] ) ? sanitize_text_field( $service['hint'] ) : '',
 			'position'        => isset( $service['position'] ) ? absint( $service['position'] ) : 100,
 			'options'         => array(),
 		);

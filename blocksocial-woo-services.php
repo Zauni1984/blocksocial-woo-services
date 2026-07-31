@@ -3,7 +3,7 @@
  * Plugin Name:       BlockSocial WooCommerce Extra Services
  * Plugin URI:        https://blocksocial.de/plugins/woo-extra-services
  * Description:        Adds paid extra shipping options and services (gift wrapping, express, carrier choice, pickup, local radius delivery and custom services) that customers can select in the cart or at checkout. Fully modular, role-aware and security hardened.
- * Version:           1.1.0
+ * Version:           1.2.0
  * Requires at least: 6.0
  * Requires PHP:      7.4
  * Author:            BlockSocial UG (haftungsbeschränkt)
@@ -21,7 +21,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'BWES_VERSION', '1.1.0' );
+define( 'BWES_VERSION', '1.2.0' );
 define( 'BWES_PLUGIN_FILE', __FILE__ );
 define( 'BWES_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'BWES_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
@@ -68,6 +68,27 @@ spl_autoload_register(
 		}
 	}
 );
+
+/**
+ * Dynamically translate a stored string against the plugin text domain.
+ *
+ * Built-in service titles, descriptions and option labels are seeded into the
+ * database in English (their source strings are registered for translation via
+ * __() in the defaults, so they exist in the catalog). Passing a stored value
+ * through here localizes the built-in defaults at render time, while any value
+ * the shop owner customized simply passes through unchanged (no catalog match).
+ *
+ * @param string $text Stored text.
+ * @return string
+ */
+function bwes_translate( $text ) {
+	if ( ! is_string( $text ) || '' === $text ) {
+		return $text;
+	}
+
+	// phpcs:ignore WordPress.WP.I18n.NonSingularStringLiteralText -- intentional dynamic lookup of catalog strings.
+	return __( $text, 'bwes' );
+}
 
 /**
  * Bootstrap the plugin once all plugins are loaded (so WooCommerce is available).

@@ -161,11 +161,17 @@ class BWES_Frontend {
 		$field_id = 'bwes-field-' . $id;
 		$current  = isset( $selections[ $id ] ) ? $selections[ $id ] : '';
 
-		echo '<div class="bwes-service bwes-service--' . esc_attr( $service['type'] ) . '" data-service="' . esc_attr( $id ) . '">';
-		echo '<div class="bwes-service__title">' . esc_html( $service['title'] ) . '</div>';
+		printf(
+			'<div class="bwes-service bwes-service--%1$s" data-service="%2$s" data-exclusive="%3$s" data-suppress-shipping="%4$s">',
+			esc_attr( $service['type'] ),
+			esc_attr( $id ),
+			! empty( $service['exclusive'] ) ? '1' : '0',
+			! empty( $service['suppress_shipping'] ) ? '1' : '0'
+		);
+		echo '<div class="bwes-service__title">' . esc_html( bwes_translate( $service['title'] ) ) . '</div>';
 
 		if ( '' !== $service['description'] ) {
-			echo '<div class="bwes-service__desc">' . wp_kses_post( wpautop( $service['description'] ) ) . '</div>';
+			echo '<div class="bwes-service__desc">' . wp_kses_post( wpautop( bwes_translate( $service['description'] ) ) ) . '</div>';
 		}
 
 		switch ( $service['type'] ) {
@@ -192,16 +198,25 @@ class BWES_Frontend {
 						esc_attr( $id ),
 						esc_attr( $option['key'] ),
 						checked( $checked, true, false ),
-						esc_html( $option['label'] ),
+						esc_html( bwes_translate( $option['label'] ) ),
 						$price ? ' <span class="bwes-price">' . esc_html( $price ) . '</span>' : ''
 					);
 				}
 				break;
 		}
 
+		// Contextual hint (e.g. "enter your address to see the delivery fee").
+		$hint = isset( $service['hint'] ) ? $service['hint'] : '';
+		if ( 'radius' === $service['type'] && '' === $hint ) {
+			$hint = __( 'Please enter your delivery address at checkout to see the delivery fee.', 'bwes' );
+		}
+		if ( '' !== $hint ) {
+			echo '<p class="bwes-hint">' . esc_html( bwes_translate( $hint ) ) . '</p>';
+		}
+
 		if ( ! empty( $service['collect_message'] ) ) {
 			$msg   = isset( $messages[ $id ] ) ? $messages[ $id ] : '';
-			$label = '' !== $service['message_label'] ? $service['message_label'] : __( 'Message', 'bwes' );
+			$label = '' !== $service['message_label'] ? bwes_translate( $service['message_label'] ) : __( 'Message', 'bwes' );
 			printf(
 				'<p class="bwes-message"><label for="%1$s">%2$s</label><textarea id="%1$s" class="bwes-message-input" name="bwes_message[%3$s]" rows="2" maxlength="500">%4$s</textarea></p>',
 				esc_attr( 'bwes-msg-' . $id ),
@@ -358,12 +373,21 @@ class BWES_Frontend {
 		// Reset the per-request map that links fee lines back to services.
 		$this->fee_meta_map = array();
 
+		// If an "exclusive" service (e.g. local delivery) is selected, only that
+		// service applies — all others are deactivated.
+		$exclusive_active = null !== $this->get_active_exclusive_service();
+
 		foreach ( $available as $id => $service ) {
 			$selection = isset( $selections[ $id ] ) ? $selections[ $id ] : null;
 
 			// Re-validate the selection against the current definition.
 			$selection = $this->sanitize_selection( $service, $selection );
 			if ( null === $selection || '' === $selection ) {
+				continue;
+			}
+
+			// Skip non-exclusive services while an exclusive one is active.
+			if ( $exclusive_active && empty( $service['exclusive'] ) ) {
 				continue;
 			}
 
@@ -418,6 +442,34 @@ class BWES_Frontend {
 		if ( '' !== $info['message'] ) {
 			$item->add_meta_data( $info['message_label'], $info['message'], true );
 		}
+	}
+
+	/**
+	 * Return the currently selected exclusive service (e.g. local delivery),
+	 * or null when none is active. When one is active, all other services are
+	 * deactivated.
+	 *
+	 * @return array|null
+	 */
+	private function get_active_exclusive_service() {
+		if ( ! WC()->cart ) {
+			return null;
+		}
+
+		$available  = $this->services->get_available_for_current_user( WC()->cart );
+		$selections = $this->get_selections();
+
+		foreach ( $available as $id => $service ) {
+			if ( empty( $service['exclusive'] ) ) {
+				continue;
+			}
+			$selection = $this->sanitize_selection( $service, isset( $selections[ $id ] ) ? $selections[ $id ] : null );
+			if ( null !== $selection && '' !== $selection ) {
+				return $service;
+			}
+		}
+
+		return null;
 	}
 
 	/**
@@ -505,11 +557,11 @@ class BWES_Frontend {
 		if ( 'radio' === $service['type'] ) {
 			$option = BWES_Fees::find_option( $service, $selection );
 			if ( $option ) {
-				return $service['title'] . ': ' . $option['label'];
+				return bwes_translate( $service['title'] ) . ': ' . bwes_translate( $option['label'] );
 			}
 		}
 
-		return $service['title'];
+		return bwes_translate( $service['title'] );
 	}
 
 	/**

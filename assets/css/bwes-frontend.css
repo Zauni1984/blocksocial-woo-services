@@ -42,6 +42,22 @@
 	opacity: 0.9;
 }
 
+.bwes-hint {
+	margin: 0.4em 0 0;
+	font-size: 0.85em;
+	font-style: italic;
+	opacity: 0.75;
+}
+
+.bwes-service--disabled {
+	opacity: 0.45;
+	pointer-events: none;
+}
+
+.bwes-service--disabled .bwes-option {
+	cursor: not-allowed;
+}
+
 .bwes-message {
 	margin: 0.5em 0 0;
 }

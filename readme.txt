@@ -4,7 +4,7 @@ Tags: woocommerce, shipping, checkout, fees, gift wrapping, express, pickup, loc
 Requires at least: 6.0
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 
@@ -56,6 +56,12 @@ Built by BlockSocial UG (haftungsbeschränkt).
 
 == Frequently Asked Questions ==
 
+= Which languages are included? =
+
+The plugin ships with a translation template (languages/bwes.pot) and complete
+German, French and Italian translations. It follows your WordPress site
+language automatically. Built-in service labels are localized as well.
+
 = How is the local delivery distance calculated? =
 
 From the store origin (coordinates or address) to the customer's shipping
@@ -68,6 +74,16 @@ Yes. Each service has a "Visible to roles" setting. Leave it empty for everyone,
 or pick specific roles (including the virtual "Guest" role).
 
 == Changelog ==
+
+= 1.2.0 =
+* Local delivery by distance is now "exclusive": selecting it deactivates all
+  other services and removes the normal shipping costs. A hint tells customers
+  to enter their address to see the distance-based fee.
+* New per-service options in the editor: "Exclusive" (deactivates other
+  services when selected) and "Hint" (note shown below the option).
+* Full internationalization: text domain loading plus translation catalog
+  (.pot) and ready-to-use German (de_DE), French (fr_FR) and Italian (it_IT)
+  translations. Built-in service labels are localized automatically.
 
 = 1.1.0 =
 * Local pickup (and any service flagged "removes shipping costs") now sets the
