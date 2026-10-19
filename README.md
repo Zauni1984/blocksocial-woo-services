@@ -149,6 +149,26 @@ add_filter( 'bwes_validate_service', function ( $error, $service, $selection, $m
 
 ---
 
+## Automatische Updates (lizenzgebunden)
+
+Nach dem Kauf erhält der Shop automatische Updates wie jedes andere Plugin
+(ein Klick unter **Plugins**). Technisch laufen die Updates über einen
+lizenzgeprüften Proxy auf blocksocial.eu, der die Releases serverseitig aus dem
+(privaten) GitHub-Repo holt – es wird **kein GitHub-Token** an den Kundenshop
+ausgeliefert. Lizenzschlüssel unter **WooCommerce → Extra Services → License &
+Updates** eintragen.
+
+Für eigene/Entwickler-Shops gibt es einen Direkt-GitHub-Modus:
+`define( 'BWES_GITHUB_TOKEN', '…' );` in `wp-config.php`.
+
+## Dokumentation & Verkauf
+
+- [`docs/USER-GUIDE.md`](docs/USER-GUIDE.md) – Bedienungsanleitung mit Screenshots
+- [`docs/SALES-KIT.md`](docs/SALES-KIT.md) – Produkttexte, Preisempfehlung,
+  WooCommerce-Verkaufs-Setup, Go-to-Market
+- [`docs/EULA.md`](docs/EULA.md) – Lizenzbedingungen
+- [`docs/server/`](docs/server/) – Referenz-Update-Proxy für blocksocial.eu
+
 ## Kompatibilität
 
 - WordPress 6.0+

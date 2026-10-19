@@ -34,14 +34,23 @@ class BWES_Admin {
 	private $services;
 
 	/**
+	 * License handler.
+	 *
+	 * @var BWES_License|null
+	 */
+	private $license;
+
+	/**
 	 * Constructor.
 	 *
 	 * @param BWES_Modules  $modules  Modules registry.
 	 * @param BWES_Services $services Services store.
+	 * @param BWES_License  $license  License handler.
 	 */
-	public function __construct( BWES_Modules $modules, BWES_Services $services ) {
+	public function __construct( BWES_Modules $modules, BWES_Services $services, $license = null ) {
 		$this->modules  = $modules;
 		$this->services = $services;
+		$this->license  = $license;
 	}
 
 	/**
@@ -57,6 +66,7 @@ class BWES_Admin {
 		add_action( 'admin_post_bwes_save_modules', array( $this, 'handle_save_modules' ) );
 		add_action( 'admin_post_bwes_save_service', array( $this, 'handle_save_service' ) );
 		add_action( 'admin_post_bwes_delete_service', array( $this, 'handle_delete_service' ) );
+		add_action( 'admin_post_bwes_save_license', array( $this, 'handle_save_license' ) );
 	}
 
 	/**
@@ -128,6 +138,8 @@ class BWES_Admin {
 			} else {
 				$this->render_services_list();
 			}
+		} elseif ( 'license' === $tab ) {
+			$this->render_license_tab();
 		} else {
 			$this->render_modules_tab();
 		}
@@ -151,6 +163,7 @@ class BWES_Admin {
 			'modules_saved'  => __( 'Module settings saved.', 'bwes' ),
 			'service_saved'  => __( 'Service saved.', 'bwes' ),
 			'service_deleted' => __( 'Service deleted.', 'bwes' ),
+			'license_saved'  => __( 'License saved and validated.', 'bwes' ),
 		);
 
 		if ( isset( $map[ $msg ] ) ) {
@@ -168,6 +181,7 @@ class BWES_Admin {
 		$tabs = array(
 			'modules'  => __( 'Modules & Settings', 'bwes' ),
 			'services' => __( 'Services', 'bwes' ),
+			'license'  => __( 'License & Updates', 'bwes' ),
 		);
 
 		echo '<h2 class="nav-tab-wrapper">';
@@ -786,6 +800,109 @@ class BWES_Admin {
 		}
 
 		$this->redirect_with( 'services', 'service_deleted' );
+	}
+
+	/* --------------------------------------------------------------------- *
+	 * License tab
+	 * --------------------------------------------------------------------- */
+
+	/**
+	 * Render the license + updates screen.
+	 *
+	 * @return void
+	 */
+	private function render_license_tab() {
+		if ( ! $this->license instanceof BWES_License ) {
+			echo '<p>' . esc_html__( 'Licensing is not available.', 'bwes' ) . '</p>';
+			return;
+		}
+
+		$record = $this->license->get_record();
+		$mode   = BWES_Updater::mode();
+
+		$status_labels = array(
+			'valid'   => __( 'Active', 'bwes' ),
+			'invalid' => __( 'Invalid', 'bwes' ),
+			'expired' => __( 'Expired', 'bwes' ),
+			'unknown' => __( 'Not validated yet', 'bwes' ),
+		);
+		$status_label = isset( $status_labels[ $record['status'] ] ) ? $status_labels[ $record['status'] ] : $record['status'];
+
+		echo '<h2>' . esc_html__( 'License & automatic updates', 'bwes' ) . '</h2>';
+		echo '<p class="description">' . esc_html__( 'Enter the license key from your blocksocial.eu order. An active license enables one-click automatic updates straight from the official release channel.', 'bwes' ) . '</p>';
+
+		echo '<form method="post" action="' . esc_url( admin_url( 'admin-post.php' ) ) . '">';
+		wp_nonce_field( 'bwes_save_license' );
+		echo '<input type="hidden" name="action" value="bwes_save_license" />';
+
+		echo '<table class="form-table" role="presentation"><tbody>';
+		printf(
+			'<tr><th scope="row"><label for="bwes-license-key">%1$s</label></th><td><input type="text" id="bwes-license-key" class="regular-text code" name="bwes_license_key" value="%2$s" autocomplete="off" /></td></tr>',
+			esc_html__( 'License key', 'bwes' ),
+			esc_attr( $record['key'] )
+		);
+		printf(
+			'<tr><th scope="row">%1$s</th><td><strong class="bwes-license-status bwes-license-status--%2$s">%3$s</strong>%4$s</td></tr>',
+			esc_html__( 'Status', 'bwes' ),
+			esc_attr( $record['status'] ),
+			esc_html( $status_label ),
+			'' !== $record['message'] ? ' — ' . esc_html( $record['message'] ) : ''
+		);
+		if ( '' !== $record['expires'] ) {
+			printf(
+				'<tr><th scope="row">%1$s</th><td>%2$s</td></tr>',
+				esc_html__( 'Valid until', 'bwes' ),
+				esc_html( $record['expires'] )
+			);
+		}
+		printf(
+			'<tr><th scope="row">%1$s</th><td><code>%2$s</code> <span class="description">%3$s</span></td></tr>',
+			esc_html__( 'Update channel', 'bwes' ),
+			esc_html( $mode ),
+			esc_html(
+				'proxy' === $mode
+					? __( 'License-gated updates via blocksocial.eu (recommended).', 'bwes' )
+					: ( 'github' === $mode
+						? __( 'Direct GitHub releases (vendor / developer mode).', 'bwes' )
+						: __( 'No update channel configured.', 'bwes' ) )
+			)
+		);
+		printf(
+			'<tr><th scope="row">%1$s</th><td>%2$s</td></tr>',
+			esc_html__( 'Installed version', 'bwes' ),
+			esc_html( BWES_VERSION )
+		);
+		echo '</tbody></table>';
+
+		submit_button( __( 'Save & validate license', 'bwes' ) );
+		echo '</form>';
+
+		echo '<p class="description">' . sprintf(
+			/* translators: %s: updates admin URL */
+			esc_html__( 'Updates appear on the %s screen once a newer release is published.', 'bwes' ),
+			'<a href="' . esc_url( admin_url( 'plugins.php' ) ) . '">' . esc_html__( 'Plugins', 'bwes' ) . '</a>'
+		) . '</p>';
+	}
+
+	/**
+	 * Save + validate the license key.
+	 *
+	 * @return void
+	 */
+	public function handle_save_license() {
+		$this->guard( 'bwes_save_license' );
+
+		if ( $this->license instanceof BWES_License ) {
+			$key = isset( $_POST['bwes_license_key'] ) ? sanitize_text_field( wp_unslash( $_POST['bwes_license_key'] ) ) : '';
+			$this->license->save_key( $key );
+			$this->license->validate( true );
+
+			if ( $this->modules instanceof BWES_Modules ) {
+				delete_transient( BWES_Updater::CACHE_KEY );
+			}
+		}
+
+		$this->redirect_with( 'license', 'license_saved' );
 	}
 
 	/* --------------------------------------------------------------------- *

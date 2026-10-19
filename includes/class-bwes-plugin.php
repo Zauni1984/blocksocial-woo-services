@@ -48,6 +48,20 @@ final class BWES_Plugin {
 	public $admin;
 
 	/**
+	 * License handler.
+	 *
+	 * @var BWES_License
+	 */
+	public $license;
+
+	/**
+	 * Update handler.
+	 *
+	 * @var BWES_Updater
+	 */
+	public $updater;
+
+	/**
 	 * Retrieve the singleton instance.
 	 *
 	 * @return BWES_Plugin
@@ -78,8 +92,13 @@ final class BWES_Plugin {
 
 		$this->frontend->hooks();
 
+		// Licensing + automatic GitHub updates (run in admin and cron contexts).
+		$this->license = new BWES_License();
+		$this->updater = new BWES_Updater( $this->license );
+		$this->updater->hooks();
+
 		if ( is_admin() ) {
-			$this->admin = new BWES_Admin( $this->modules, $this->services );
+			$this->admin = new BWES_Admin( $this->modules, $this->services, $this->license );
 			$this->admin->hooks();
 		}
 

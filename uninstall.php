@@ -13,11 +13,14 @@ $bwes_options = array(
 	'bwes_settings',
 	'bwes_modules',
 	'bwes_services',
+	'bwes_license',
 );
 
 foreach ( $bwes_options as $bwes_option ) {
 	delete_option( $bwes_option );
 }
+
+delete_transient( 'bwes_update_info' );
 
 // Clean up cached geocoding transients (single site).
 global $wpdb;

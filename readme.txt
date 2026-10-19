@@ -4,7 +4,7 @@ Tags: woocommerce, shipping, checkout, fees, gift wrapping, express, pickup, loc
 Requires at least: 6.0
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.2.0
+Stable tag: 1.3.0
 License: MIT
 License URI: https://opensource.org/licenses/MIT
 
@@ -74,6 +74,13 @@ Yes. Each service has a "Visible to roles" setting. Leave it empty for everyone,
 or pick specific roles (including the virtual "Guest" role).
 
 == Changelog ==
+
+= 1.3.0 =
+* Automatic updates: licence-gated auto-updates delivered from GitHub releases
+  through a vendor proxy (blocksocial.eu), with an optional direct-GitHub mode
+  for the vendor's own sites. New "License & Updates" admin tab.
+* Added full documentation set under /docs (user guide with screenshots, sales
+  kit with pricing, EULA, and the server-side update proxy reference).
 
 = 1.2.0 =
 * Local delivery by distance is now "exclusive": selecting it deactivates all
