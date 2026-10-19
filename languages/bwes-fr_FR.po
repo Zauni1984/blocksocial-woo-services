@@ -1,0 +1,387 @@
+# Translation of BlockSocial WooCommerce Extra Services.
+# Copyright (C) 2026 BlockSocial UG (haftungsbeschraenkt)
+# This file is distributed under the MIT license.
+msgid ""
+msgstr ""
+"Project-Id-Version: BlockSocial WooCommerce Extra Services 1.2.0\n"
+"Report-Msgid-Bugs-To: https://blocksocial.de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: French\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Domain: bwes\n"
+msgid "%d option"
+msgid_plural "%d options"
+msgstr[0] "%d option"
+msgstr[1] "%d options"
+
+msgid "Actions"
+msgstr "Actions"
+
+msgid "Add custom service"
+msgstr "Ajouter un service personnalisé"
+
+msgid "Add option"
+msgstr "Ajouter une option"
+
+msgid "Add service"
+msgstr "Ajouter un service"
+
+msgid "Allow customers to pick a preferred carrier (e.g. DHL instead of DPD) where possible."
+msgstr "Permettre aux clients de choisir un transporteur préféré (par ex. DHL au lieu de DPD) lorsque c’est possible."
+
+msgid "Back to services"
+msgstr "Retour aux services"
+
+msgid "BlockSocial WooCommerce Extra Services requires WooCommerce to be installed and active."
+msgstr "BlockSocial WooCommerce Extra Services nécessite que WooCommerce soit installé et activé."
+
+msgid "BlockSocial — Extra Services"
+msgstr "BlockSocial — Services supplémentaires"
+
+msgid "Both cart and checkout"
+msgstr "Panier et commande"
+
+msgid "Carrier choice"
+msgstr "Choix du transporteur"
+
+msgid "Cart page"
+msgstr "Page du panier"
+
+msgid "Charge a delivery fee based on the distance from your store (km radius tiers)."
+msgstr "Facturer des frais de livraison en fonction de la distance depuis votre boutique (paliers de rayon en km)."
+
+msgid "Charge tax on this fee"
+msgstr "Appliquer la taxe sur ces frais"
+
+msgid "Checkbox (single opt-in fee)"
+msgstr "Case à cocher (frais unique optionnel)"
+
+msgid "Checkout page"
+msgstr "Page de commande"
+
+msgid "Choice (radio options)"
+msgstr "Choix (options radio)"
+
+msgid "Choose how fast you need your order."
+msgstr "Choisissez la rapidité de livraison souhaitée."
+
+msgid "Collect a message from the customer"
+msgstr "Recueillir un message du client"
+
+msgid "Create service"
+msgstr "Créer le service"
+
+msgid "Create your own paid services and shipping extras manually."
+msgstr "Créez manuellement vos propres services payants et options d’expédition."
+
+msgid "Custom services"
+msgstr "Services personnalisés"
+
+msgid "DHL"
+msgstr "DHL"
+
+msgid "DPD (standard)"
+msgstr "DPD (standard)"
+
+msgid "Default"
+msgstr "Par défaut"
+
+msgid "Delete"
+msgstr "Supprimer"
+
+msgid "Delete this service?"
+msgstr "Supprimer ce service ?"
+
+msgid "Delivery speed"
+msgstr "Vitesse de livraison"
+
+msgid "Description"
+msgstr "Description"
+
+msgid "Disabled"
+msgstr "Désactivé"
+
+msgid "Distance tiers (radius)"
+msgstr "Paliers de distance (rayon)"
+
+msgid "Edit"
+msgstr "Modifier"
+
+msgid "Edit service"
+msgstr "Modifier le service"
+
+msgid "Enable or disable each feature module. Disabling a module hides all of its services and removes any fee it would add."
+msgstr "Activez ou désactivez chaque module. Désactiver un module masque tous ses services et supprime les frais qu’il ajouterait."
+
+msgid "Enabled"
+msgstr "Activé"
+
+msgid "Everyone"
+msgstr "Tout le monde"
+
+msgid "Exclusive"
+msgstr "Exclusif"
+
+msgid "Express & priority shipping"
+msgstr "Expédition express et prioritaire"
+
+msgid "Express delivery (1–2 days)"
+msgstr "Livraison express (1 à 2 jours)"
+
+msgid "Extra Services"
+msgstr "Services supplémentaires"
+
+msgid "Extra services"
+msgstr "Services supplémentaires"
+
+msgid "Fee"
+msgstr "Frais"
+
+msgid "Fee type"
+msgstr "Type de frais"
+
+msgid "Field label"
+msgstr "Libellé du champ"
+
+msgid "Flat"
+msgstr "Fixe"
+
+msgid "Flat amount"
+msgstr "Montant fixe"
+
+msgid "General settings"
+msgstr "Réglages généraux"
+
+msgid "Geocoding endpoint"
+msgstr "Point d’accès de géocodage"
+
+msgid "Gift wrapping"
+msgstr "Emballage cadeau"
+
+msgid "Guest (not logged in)"
+msgstr "Invité (non connecté)"
+
+msgid "Hint"
+msgstr "Remarque"
+
+msgid "Input type"
+msgstr "Type de saisie"
+
+msgid "Insufficient permissions."
+msgstr "Autorisations insuffisantes."
+
+msgid "Key"
+msgstr "Clé"
+
+msgid "Label"
+msgstr "Libellé"
+
+msgid "Leave all unchecked to show to everyone. Select roles to restrict this option to specific user groups (e.g. dropshipping / wholesale fees)."
+msgstr "Laissez tout décoché pour afficher à tous. Sélectionnez des rôles pour limiter cette option à certains groupes d’utilisateurs (par ex. frais de dropshipping / de gros)."
+
+msgid "Let customers add gift wrapping for a fee, with an optional personal message."
+msgstr "Permettez aux clients d’ajouter un emballage cadeau moyennant des frais, avec un message personnel facultatif."
+
+msgid "Local delivery by distance"
+msgstr "Livraison locale selon la distance"
+
+msgid "Local pickup"
+msgstr "Retrait sur place"
+
+msgid "Local radius delivery"
+msgstr "Livraison dans un rayon local"
+
+msgid "Local radius delivery — store origin"
+msgstr "Livraison dans un rayon local — adresse de la boutique"
+
+msgid "Max km"
+msgstr "Km max."
+
+msgid "Message"
+msgstr "Message"
+
+msgid "Message field"
+msgstr "Champ de message"
+
+msgid "Module"
+msgstr "Module"
+
+msgid "Module settings saved."
+msgstr "Réglages des modules enregistrés."
+
+msgid "Modules"
+msgstr "Modules"
+
+msgid "Modules & Settings"
+msgstr "Modules et réglages"
+
+msgid "No services yet."
+msgstr "Aucun service pour l’instant."
+
+msgid "Nominatim-compatible search endpoint. Respect the usage policy of whichever service you use."
+msgstr "Point d’accès de recherche compatible Nominatim. Respectez les conditions d’utilisation du service que vous utilisez."
+
+msgid "Offer faster delivery tiers (e.g. express / priority) against a surcharge."
+msgstr "Proposez des niveaux de livraison plus rapides (par ex. express / prioritaire) moyennant un supplément."
+
+msgid "Offer store pickup as a selectable option, with or without a fee."
+msgstr "Proposez le retrait en boutique comme option sélectionnable, avec ou sans frais."
+
+msgid "Optional but recommended."
+msgstr "Facultatif mais recommandé."
+
+msgid "Optional note shown below the option (useful for distance-based delivery)."
+msgstr "Note facultative affichée sous l’option (utile pour la livraison selon la distance)."
+
+msgid "Options / tiers"
+msgstr "Options / paliers"
+
+msgid "Origin address"
+msgstr "Adresse d’origine"
+
+msgid "Origin lat / lng"
+msgstr "Latitude / longitude d’origine"
+
+msgid "Per item"
+msgstr "Par article"
+
+msgid "Percent"
+msgstr "Pourcentage"
+
+msgid "Percent of subtotal"
+msgstr "Pourcentage du sous-total"
+
+msgid "Pick up your order at our store — no shipping costs."
+msgstr "Retirez votre commande dans notre boutique — aucuns frais de livraison."
+
+msgid "Pick your preferred carrier where available."
+msgstr "Choisissez votre transporteur préféré lorsqu’il est disponible."
+
+msgid "Please enter your delivery address at checkout to see the delivery fee."
+msgstr "Veuillez saisir votre adresse de livraison lors de la commande pour voir les frais de livraison."
+
+msgid "Preferred carrier"
+msgstr "Transporteur préféré"
+
+msgid "Roles"
+msgstr "Rôles"
+
+msgid "Save changes"
+msgstr "Enregistrer les modifications"
+
+msgid "Save service"
+msgstr "Enregistrer le service"
+
+msgid "Selecting this option deactivates all other services (e.g. local delivery)"
+msgstr "Sélectionner cette option désactive tous les autres services (par ex. livraison locale)"
+
+msgid "Selecting this option removes all shipping costs (e.g. local pickup / local delivery)"
+msgstr "Sélectionner cette option supprime tous les frais de livraison (par ex. retrait / livraison locale)"
+
+msgid "Service"
+msgstr "Service"
+
+msgid "Service deleted."
+msgstr "Service supprimé."
+
+msgid "Service saved."
+msgstr "Service enregistré."
+
+msgid "Services"
+msgstr "Services"
+
+msgid "Settings"
+msgstr "Réglages"
+
+msgid "Shipping"
+msgstr "Expédition"
+
+msgid "Show services on"
+msgstr "Afficher les services sur"
+
+msgid "Sort order"
+msgstr "Ordre de tri"
+
+msgid "Standard"
+msgstr "Standard"
+
+msgid "Standard delivery"
+msgstr "Livraison standard"
+
+msgid "Status"
+msgstr "Statut"
+
+msgid "Tax"
+msgstr "Taxe"
+
+msgid "Title"
+msgstr "Titre"
+
+msgid "Type"
+msgstr "Type"
+
+msgid "Untitled service"
+msgstr "Service sans titre"
+
+msgid "Up to 10 km"
+msgstr "Jusqu’à 10 km"
+
+msgid "Up to 20 km"
+msgstr "Jusqu’à 20 km"
+
+msgid "Up to 5 km"
+msgstr "Jusqu’à 5 km"
+
+msgid "Used by the Local radius delivery module. Provide either coordinates (most reliable) or an address to geocode."
+msgstr "Utilisé par le module de livraison dans un rayon local. Fournissez soit des coordonnées (le plus fiable), soit une adresse à géocoder."
+
+msgid "Used for the checkbox type. Negative values act as a discount."
+msgstr "Utilisé pour le type case à cocher. Les valeurs négatives agissent comme une remise."
+
+msgid "Visible to roles"
+msgstr "Visible pour les rôles"
+
+msgid "We deliver locally. The fee depends on the distance to your address."
+msgstr "Nous livrons localement. Les frais dépendent de la distance jusqu’à votre adresse."
+
+msgid "We will wrap your order as a gift."
+msgstr "Nous emballerons votre commande comme un cadeau."
+
+msgid "When selected at checkout, shipping rates are replaced by a single free option. Any fee configured above still applies."
+msgstr "Lorsqu’elle est sélectionnée lors de la commande, les tarifs d’expédition sont remplacés par une seule option gratuite. Tous frais configurés ci-dessus s’appliquent toujours."
+
+msgid "Which module this service belongs to. It only shows when that module is enabled."
+msgstr "Le module auquel appartient ce service. Il ne s’affiche que lorsque ce module est activé."
+
+msgid "Yes, add this"
+msgstr "Oui, ajouter"
+
+msgid "Yes, deliver to my address"
+msgstr "Oui, livrer à mon adresse"
+
+msgid "You do not have permission to access this page."
+msgstr "Vous n’avez pas la permission d’accéder à cette page."
+
+msgid "Your gift message (optional)"
+msgstr "Votre message cadeau (facultatif)"
+
+msgid "e.g. Please enter your address to see the fee"
+msgstr "par ex. Veuillez saisir votre adresse pour voir les frais"
+
+msgid "fee based on distance"
+msgstr "frais selon la distance"
+
+msgid "free"
+msgstr "gratuit"
+
+msgid "longitude"
+msgstr "longitude"
+
+msgid "module off"
+msgstr "module désactivé"
+
+msgid "per item"
+msgstr "par article"
+
