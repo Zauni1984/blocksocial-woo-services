@@ -1,0 +1,452 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: BlockSocial WooCommerce Extra Services 1.3.0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl_NL\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "%d option"
+msgid_plural "%d options"
+msgstr[0] "%d optie"
+msgstr[1] "%d opties"
+
+msgid "Actions"
+msgstr "Acties"
+
+msgid "Active"
+msgstr "Actief"
+
+msgid "Add custom service"
+msgstr "Eigen service toevoegen"
+
+msgid "Add option"
+msgstr "Optie toevoegen"
+
+msgid "Add service"
+msgstr "Service toevoegen"
+
+msgid "Allow customers to pick a preferred carrier (e.g. DHL instead of DPD) where possible."
+msgstr "Laat klanten waar mogelijk een voorkeursvervoerder kiezen (bijv. DHL in plaats van DPD)."
+
+msgid "Back to services"
+msgstr "Terug naar services"
+
+msgid "BlockSocial WooCommerce Extra Services requires WooCommerce to be installed and active."
+msgstr "BlockSocial WooCommerce Extra Services vereist dat WooCommerce is geïnstalleerd en actief is."
+
+msgid "BlockSocial — Extra Services"
+msgstr "BlockSocial — Extra services"
+
+msgid "Both cart and checkout"
+msgstr "Winkelwagen en afrekenen"
+
+msgid "Carrier choice"
+msgstr "Keuze van vervoerder"
+
+msgid "Cart page"
+msgstr "Winkelwagenpagina"
+
+msgid "Charge a delivery fee based on the distance from your store (km radius tiers)."
+msgstr "Reken bezorgkosten op basis van de afstand tot je winkel (km-straaltrappen)."
+
+msgid "Charge tax on this fee"
+msgstr "Belasting over deze kosten berekenen"
+
+msgid "Checkbox (single opt-in fee)"
+msgstr "Selectievakje (eenmalige optionele kosten)"
+
+msgid "Checkout page"
+msgstr "Afrekenpagina"
+
+msgid "Choice (radio options)"
+msgstr "Keuze (radio-opties)"
+
+msgid "Choose how fast you need your order."
+msgstr "Kies hoe snel je je bestelling nodig hebt."
+
+msgid "Collect a message from the customer"
+msgstr "Een bericht van de klant verzamelen"
+
+msgid "Could not prepare the update package."
+msgstr "Kon het updatepakket niet voorbereiden."
+
+msgid "Could not reach the license server. Will retry later."
+msgstr "Licentieserver niet bereikbaar. Wordt later opnieuw geprobeerd."
+
+msgid "Create service"
+msgstr "Service aanmaken"
+
+msgid "Create your own paid services and shipping extras manually."
+msgstr "Maak handmatig je eigen betaalde services en verzendextra’s aan."
+
+msgid "Custom services"
+msgstr "Eigen services"
+
+msgid "DHL"
+msgstr "DHL"
+
+msgid "DPD (standard)"
+msgstr "DPD (standaard)"
+
+msgid "Default"
+msgstr "Standaard"
+
+msgid "Delete"
+msgstr "Verwijderen"
+
+msgid "Delete this service?"
+msgstr "Deze service verwijderen?"
+
+msgid "Delivery speed"
+msgstr "Bezorgsnelheid"
+
+msgid "Description"
+msgstr "Beschrijving"
+
+msgid "Direct GitHub releases (vendor / developer mode)."
+msgstr "Directe GitHub-releases (leveranciers-/ontwikkelaarsmodus)."
+
+msgid "Disabled"
+msgstr "Uitgeschakeld"
+
+msgid "Distance tiers (radius)"
+msgstr "Afstandstrappen (straal)"
+
+msgid "Edit"
+msgstr "Bewerken"
+
+msgid "Edit service"
+msgstr "Service bewerken"
+
+msgid "Enable or disable each feature module. Disabling a module hides all of its services and removes any fee it would add."
+msgstr "Schakel elke module in of uit. Een uitgeschakelde module verbergt al zijn services en verwijdert elke bijbehorende toeslag."
+
+msgid "Enabled"
+msgstr "Ingeschakeld"
+
+msgid "Enter the license key from your blocksocial.eu order. An active license enables one-click automatic updates straight from the official release channel."
+msgstr "Voer de licentiesleutel uit je blocksocial.eu-bestelling in. Een actieve licentie maakt automatische updates met één klik mogelijk vanaf het officiële kanaal."
+
+msgid "Everyone"
+msgstr "Iedereen"
+
+msgid "Exclusive"
+msgstr "Exclusief"
+
+msgid "Expired"
+msgstr "Verlopen"
+
+msgid "Express & priority shipping"
+msgstr "Express- en prioriteitsverzending"
+
+msgid "Express delivery (1–2 days)"
+msgstr "Expresbezorging (1–2 dagen)"
+
+msgid "Extra Services"
+msgstr "Extra services"
+
+msgid "Extra services"
+msgstr "Extra services"
+
+msgid "Fee"
+msgstr "Kosten"
+
+msgid "Fee type"
+msgstr "Type kosten"
+
+msgid "Field label"
+msgstr "Veldlabel"
+
+msgid "Flat"
+msgstr "Vast"
+
+msgid "Flat amount"
+msgstr "Vast bedrag"
+
+msgid "General settings"
+msgstr "Algemene instellingen"
+
+msgid "Geocoding endpoint"
+msgstr "Geocoding-endpoint"
+
+msgid "Gift wrapping"
+msgstr "Cadeauverpakking"
+
+msgid "Guest (not logged in)"
+msgstr "Gast (niet ingelogd)"
+
+msgid "Hint"
+msgstr "Opmerking"
+
+msgid "Input type"
+msgstr "Invoertype"
+
+msgid "Installed version"
+msgstr "Geïnstalleerde versie"
+
+msgid "Insufficient permissions."
+msgstr "Onvoldoende rechten."
+
+msgid "Invalid"
+msgstr "Ongeldig"
+
+msgid "Key"
+msgstr "Sleutel"
+
+msgid "Label"
+msgstr "Label"
+
+msgid "Leave all unchecked to show to everyone. Select roles to restrict this option to specific user groups (e.g. dropshipping / wholesale fees)."
+msgstr "Laat alles uitgevinkt om aan iedereen te tonen. Selecteer rollen om deze optie te beperken tot bepaalde gebruikersgroepen (bijv. dropshipping-/groothandelskosten)."
+
+msgid "Let customers add gift wrapping for a fee, with an optional personal message."
+msgstr "Laat klanten tegen betaling cadeauverpakking toevoegen, met een optioneel persoonlijk bericht."
+
+msgid "License & Updates"
+msgstr "Licentie en updates"
+
+msgid "License & automatic updates"
+msgstr "Licentie en automatische updates"
+
+msgid "License key"
+msgstr "Licentiesleutel"
+
+msgid "License saved and validated."
+msgstr "Licentie opgeslagen en gevalideerd."
+
+msgid "License-gated updates via blocksocial.eu (recommended)."
+msgstr "Licentiegebonden updates via blocksocial.eu (aanbevolen)."
+
+msgid "Licensing is not available."
+msgstr "Licentiebeheer is niet beschikbaar."
+
+msgid "Local delivery by distance"
+msgstr "Lokale bezorging op afstand"
+
+msgid "Local pickup"
+msgstr "Afhalen in de winkel"
+
+msgid "Local radius delivery"
+msgstr "Lokale bezorging binnen straal"
+
+msgid "Local radius delivery — store origin"
+msgstr "Lokale bezorging binnen straal — winkeladres"
+
+msgid "Max km"
+msgstr "Max. km"
+
+msgid "Message"
+msgstr "Bericht"
+
+msgid "Message field"
+msgstr "Berichtveld"
+
+msgid "Module"
+msgstr "Module"
+
+msgid "Module settings saved."
+msgstr "Module-instellingen opgeslagen."
+
+msgid "Modules"
+msgstr "Modules"
+
+msgid "Modules & Settings"
+msgstr "Modules en instellingen"
+
+msgid "No license key entered."
+msgstr "Geen licentiesleutel ingevoerd."
+
+msgid "No services yet."
+msgstr "Nog geen services."
+
+msgid "No update channel configured."
+msgstr "Geen updatekanaal geconfigureerd."
+
+msgid "Nominatim-compatible search endpoint. Respect the usage policy of whichever service you use."
+msgstr "Nominatim-compatibel zoek-endpoint. Respecteer het gebruiksbeleid van de dienst die je gebruikt."
+
+msgid "Not validated yet"
+msgstr "Nog niet gevalideerd"
+
+msgid "Offer faster delivery tiers (e.g. express / priority) against a surcharge."
+msgstr "Bied snellere bezorgniveaus aan (bijv. express / prioriteit) tegen een toeslag."
+
+msgid "Offer store pickup as a selectable option, with or without a fee."
+msgstr "Bied afhalen in de winkel aan als selecteerbare optie, met of zonder kosten."
+
+msgid "Optional but recommended."
+msgstr "Optioneel maar aanbevolen."
+
+msgid "Optional note shown below the option (useful for distance-based delivery)."
+msgstr "Optionele opmerking die onder de optie wordt getoond (handig voor bezorging op afstand)."
+
+msgid "Options / tiers"
+msgstr "Opties / trappen"
+
+msgid "Origin address"
+msgstr "Herkomstadres"
+
+msgid "Origin lat / lng"
+msgstr "Herkomst lat / lng"
+
+msgid "Per item"
+msgstr "Per artikel"
+
+msgid "Percent"
+msgstr "Percentage"
+
+msgid "Percent of subtotal"
+msgstr "Percentage van subtotaal"
+
+msgid "Pick up your order at our store — no shipping costs."
+msgstr "Haal je bestelling op in onze winkel — geen verzendkosten."
+
+msgid "Pick your preferred carrier where available."
+msgstr "Kies je voorkeursvervoerder waar beschikbaar."
+
+msgid "Please enter your delivery address at checkout to see the delivery fee."
+msgstr "Voer je bezorgadres in bij het afrekenen om de bezorgkosten te zien."
+
+msgid "Plugins"
+msgstr "Plugins"
+
+msgid "Preferred carrier"
+msgstr "Voorkeursvervoerder"
+
+msgid "Roles"
+msgstr "Rollen"
+
+msgid "Save & validate license"
+msgstr "Licentie opslaan en valideren"
+
+msgid "Save changes"
+msgstr "Wijzigingen opslaan"
+
+msgid "Save service"
+msgstr "Service opslaan"
+
+msgid "See the release notes on blocksocial.eu."
+msgstr "Zie de release-opmerkingen op blocksocial.eu."
+
+msgid "Selecting this option deactivates all other services (e.g. local delivery)"
+msgstr "Deze optie selecteren schakelt alle andere services uit (bijv. lokale bezorging)"
+
+msgid "Selecting this option removes all shipping costs (e.g. local pickup / local delivery)"
+msgstr "Deze optie selecteren verwijdert alle verzendkosten (bijv. afhalen / lokale bezorging)"
+
+msgid "Service"
+msgstr "Service"
+
+msgid "Service deleted."
+msgstr "Service verwijderd."
+
+msgid "Service saved."
+msgstr "Service opgeslagen."
+
+msgid "Services"
+msgstr "Services"
+
+msgid "Settings"
+msgstr "Instellingen"
+
+msgid "Shipping"
+msgstr "Verzending"
+
+msgid "Show services on"
+msgstr "Services tonen op"
+
+msgid "Sort order"
+msgstr "Sorteervolgorde"
+
+msgid "Standard"
+msgstr "Standaard"
+
+msgid "Standard delivery"
+msgstr "Standaardbezorging"
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Tax"
+msgstr "Belasting"
+
+msgid "Title"
+msgstr "Titel"
+
+msgid "Type"
+msgstr "Type"
+
+msgid "Untitled service"
+msgstr "Naamloze service"
+
+msgid "Up to 10 km"
+msgstr "Tot 10 km"
+
+msgid "Up to 20 km"
+msgstr "Tot 20 km"
+
+msgid "Up to 5 km"
+msgstr "Tot 5 km"
+
+msgid "Update channel"
+msgstr "Updatekanaal"
+
+msgid "Updates appear on the %s screen once a newer release is published."
+msgstr "Updates verschijnen op het scherm %s zodra er een nieuwere versie is gepubliceerd."
+
+msgid "Used by the Local radius delivery module. Provide either coordinates (most reliable) or an address to geocode."
+msgstr "Gebruikt door de module voor lokale bezorging binnen straal. Geef coördinaten op (betrouwbaarst) of een adres om te geocoderen."
+
+msgid "Used for the checkbox type. Negative values act as a discount."
+msgstr "Gebruikt voor het selectievakjetype. Negatieve waarden werken als korting."
+
+msgid "Valid until"
+msgstr "Geldig tot"
+
+msgid "Visible to roles"
+msgstr "Zichtbaar voor rollen"
+
+msgid "We deliver locally. The fee depends on the distance to your address."
+msgstr "Wij bezorgen lokaal. De kosten hangen af van de afstand tot je adres."
+
+msgid "We will wrap your order as a gift."
+msgstr "Wij verpakken je bestelling als cadeau."
+
+msgid "When selected at checkout, shipping rates are replaced by a single free option. Any fee configured above still applies."
+msgstr "Wanneer geselecteerd bij het afrekenen, worden de verzendtarieven vervangen door één gratis optie. Eventuele hierboven ingestelde kosten blijven van toepassing."
+
+msgid "Which module this service belongs to. It only shows when that module is enabled."
+msgstr "Tot welke module deze service behoort. Hij wordt alleen getoond wanneer die module is ingeschakeld."
+
+msgid "Yes, add this"
+msgstr "Ja, toevoegen"
+
+msgid "Yes, deliver to my address"
+msgstr "Ja, bezorg op mijn adres"
+
+msgid "You do not have permission to access this page."
+msgstr "Je hebt geen toestemming om deze pagina te openen."
+
+msgid "Your gift message (optional)"
+msgstr "Je cadeaubericht (optioneel)"
+
+msgid "e.g. Please enter your address to see the fee"
+msgstr "bijv. Voer je adres in om de kosten te zien"
+
+msgid "fee based on distance"
+msgstr "kosten op basis van afstand"
+
+msgid "free"
+msgstr "gratis"
+
+msgid "longitude"
+msgstr "lengtegraad"
+
+msgid "module off"
+msgstr "module uit"
+
+msgid "per item"
+msgstr "per artikel"
+

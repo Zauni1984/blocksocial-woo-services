@@ -167,8 +167,9 @@ Store-Koordinaten hinterlegen (zuverlässiger als Adresse) und sicherstellen, da
 die Lieferadresse geokodiert werden kann. Schlägt die Entfernungsermittlung fehl,
 wird bewusst keine Gebühr berechnet (der Checkout wird nie blockiert).
 
-**Mehrsprachig.** Das Plugin folgt der WordPress-Sprache. Deutsch, Französisch
-und Italienisch sind enthalten; weitere Sprachen über `languages/bwes.pot`.
+**Mehrsprachig.** Das Plugin folgt der WordPress-Sprache. Deutsch, Französisch,
+Italienisch, Spanisch, Niederländisch, Portugiesisch und Polnisch sind enthalten;
+weitere Sprachen über `languages/bwes.pot`.
 
 **Kein automatisches Update.** Lizenzstatus unter *License & Updates* prüfen
 (muss *Active* sein) und ob der Server blocksocial.eu erreichbar ist.

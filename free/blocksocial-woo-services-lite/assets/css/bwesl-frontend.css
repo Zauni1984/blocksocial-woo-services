@@ -1,0 +1,11 @@
+.bwesl-services{margin:1.5em 0;padding:1.25em;border:1px solid rgba(0,0,0,.1);border-radius:8px;background:rgba(0,0,0,.015);}
+.bwesl-services__heading{margin:0 0 .75em;font-size:1.1em;}
+.bwesl-service{padding:.75em 0;border-top:1px solid rgba(0,0,0,.08);}
+.bwesl-service:first-of-type{border-top:0;}
+.bwesl-service__title{font-weight:600;margin-bottom:.15em;}
+.bwesl-service__desc{font-size:.9em;opacity:.8;margin-bottom:.4em;}
+.bwesl-option{display:block;margin:.3em 0;cursor:pointer;}
+.bwesl-option .bwesl-price{font-weight:600;opacity:.9;}
+.bwesl-message{margin:.5em 0 0;}
+.bwesl-message label{display:block;font-size:.9em;margin-bottom:.2em;}
+.bwesl-message-input{width:100%;max-width:100%;}

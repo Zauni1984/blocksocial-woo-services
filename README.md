@@ -50,9 +50,10 @@ der Browser kann nur den *Schlüssel* einer Auswahl senden, niemals einen Preis.
   Lieferung) deaktiviert bei Auswahl alle anderen Services – im UI ausgegraut
   und serverseitig erzwungen.
 - **Mehrsprachig**: Übersetzungsvorlage (`languages/bwes.pot`) plus fertige
-  Übersetzungen für **Deutsch, Französisch und Italienisch**. Das Plugin folgt
-  automatisch der WordPress-Sprache; auch die Standard-Service-Bezeichnungen
-  werden lokalisiert.
+  Übersetzungen für **Deutsch, Französisch, Italienisch, Spanisch,
+  Niederländisch, Portugiesisch und Polnisch** (Quellsprache Englisch). Das
+  Plugin folgt automatisch der WordPress-Sprache; auch die Standard-Service-
+  Bezeichnungen werden lokalisiert.
 
 ---
 

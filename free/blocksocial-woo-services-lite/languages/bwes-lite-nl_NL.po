@@ -1,0 +1,111 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: BlockSocial Extra Services Lite 1.0.0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: nl_NL\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "BlockSocial Extra Services Lite requires WooCommerce to be installed and active."
+msgstr "BlockSocial Extra Services Lite vereist dat WooCommerce is geïnstalleerd en actief is."
+
+msgid "BlockSocial Extra Services Pro adds express & priority tiers, carrier choice (DHL instead of DPD), distance-based local delivery, unlimited custom services, per-role fees (e.g. dropshipping) and automatic updates."
+msgstr "BlockSocial Extra Services Pro voegt express- en prioriteitsniveaus toe, keuze van vervoerder (DHL in plaats van DPD), lokale bezorging op afstand, onbeperkte eigen services, kosten per rol (bijv. dropshipping) en automatische updates."
+
+msgid "BlockSocial — Extra Services (Lite)"
+msgstr "BlockSocial — Extra services (Lite)"
+
+msgid "Both cart and checkout"
+msgstr "Winkelwagen en afrekenen"
+
+msgid "Cart page"
+msgstr "Winkelwagenpagina"
+
+msgid "Charge tax on this fee"
+msgstr "Belasting over deze kosten berekenen"
+
+msgid "Checkout page"
+msgstr "Afrekenpagina"
+
+msgid "Collect a gift message"
+msgstr "Een cadeaubericht verzamelen"
+
+msgid "Description"
+msgstr "Beschrijving"
+
+msgid "Enable"
+msgstr "Inschakelen"
+
+msgid "Extra Services"
+msgstr "Extra services"
+
+msgid "Extra Services Lite"
+msgstr "Extra services Lite"
+
+msgid "Extra services"
+msgstr "Extra services"
+
+msgid "Fee"
+msgstr "Kosten"
+
+msgid "General"
+msgstr "Algemeen"
+
+msgid "Gift wrapping"
+msgstr "Cadeauverpakking"
+
+msgid "Insufficient permissions."
+msgstr "Onvoldoende rechten."
+
+msgid "Local pickup"
+msgstr "Afhalen in de winkel"
+
+msgid "Message"
+msgstr "Bericht"
+
+msgid "Message field label"
+msgstr "Label van berichtveld"
+
+msgid "Need more?"
+msgstr "Meer nodig?"
+
+msgid "Pick up your order at our store — no shipping costs."
+msgstr "Haal je bestelling op in onze winkel — geen verzendkosten."
+
+msgid "Save changes"
+msgstr "Wijzigingen opslaan"
+
+msgid "Settings"
+msgstr "Instellingen"
+
+msgid "Settings saved."
+msgstr "Instellingen opgeslagen."
+
+msgid "Show services on"
+msgstr "Services tonen op"
+
+msgid "Title"
+msgstr "Titel"
+
+msgid "Upgrade to Pro"
+msgstr "Upgraden naar Pro"
+
+msgid "We will wrap your order as a gift."
+msgstr "Wij verpakken je bestelling als cadeau."
+
+msgid "When pickup is selected, the normal shipping cost is set to zero."
+msgstr "Wanneer afhalen is geselecteerd, worden de normale verzendkosten op nul gezet."
+
+msgid "Yes, add this"
+msgstr "Ja, toevoegen"
+
+msgid "You do not have permission to access this page."
+msgstr "Je hebt geen toestemming om deze pagina te openen."
+
+msgid "Your gift message (optional)"
+msgstr "Je cadeaubericht (optioneel)"
+
+msgid "free"
+msgstr "gratis"
+

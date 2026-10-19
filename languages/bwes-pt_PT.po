@@ -1,0 +1,452 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: BlockSocial WooCommerce Extra Services 1.3.0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_PT\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "%d option"
+msgid_plural "%d options"
+msgstr[0] "%d opção"
+msgstr[1] "%d opções"
+
+msgid "Actions"
+msgstr "Ações"
+
+msgid "Active"
+msgstr "Ativa"
+
+msgid "Add custom service"
+msgstr "Adicionar serviço personalizado"
+
+msgid "Add option"
+msgstr "Adicionar opção"
+
+msgid "Add service"
+msgstr "Adicionar serviço"
+
+msgid "Allow customers to pick a preferred carrier (e.g. DHL instead of DPD) where possible."
+msgstr "Permita que os clientes escolham uma transportadora preferida (por ex. DHL em vez de DPD) quando possível."
+
+msgid "Back to services"
+msgstr "Voltar aos serviços"
+
+msgid "BlockSocial WooCommerce Extra Services requires WooCommerce to be installed and active."
+msgstr "O BlockSocial WooCommerce Extra Services requer que o WooCommerce esteja instalado e ativo."
+
+msgid "BlockSocial — Extra Services"
+msgstr "BlockSocial — Serviços extra"
+
+msgid "Both cart and checkout"
+msgstr "Carrinho e finalização"
+
+msgid "Carrier choice"
+msgstr "Escolha da transportadora"
+
+msgid "Cart page"
+msgstr "Página do carrinho"
+
+msgid "Charge a delivery fee based on the distance from your store (km radius tiers)."
+msgstr "Cobre uma taxa de entrega com base na distância à sua loja (escalões de raio em km)."
+
+msgid "Charge tax on this fee"
+msgstr "Aplicar imposto a esta taxa"
+
+msgid "Checkbox (single opt-in fee)"
+msgstr "Caixa de seleção (taxa única opcional)"
+
+msgid "Checkout page"
+msgstr "Página de finalização"
+
+msgid "Choice (radio options)"
+msgstr "Escolha (opções de rádio)"
+
+msgid "Choose how fast you need your order."
+msgstr "Escolha a rapidez com que precisa da sua encomenda."
+
+msgid "Collect a message from the customer"
+msgstr "Recolher uma mensagem do cliente"
+
+msgid "Could not prepare the update package."
+msgstr "Não foi possível preparar o pacote de atualização."
+
+msgid "Could not reach the license server. Will retry later."
+msgstr "Não foi possível contactar o servidor de licenças. Nova tentativa mais tarde."
+
+msgid "Create service"
+msgstr "Criar serviço"
+
+msgid "Create your own paid services and shipping extras manually."
+msgstr "Crie manualmente os seus próprios serviços pagos e extras de envio."
+
+msgid "Custom services"
+msgstr "Serviços personalizados"
+
+msgid "DHL"
+msgstr "DHL"
+
+msgid "DPD (standard)"
+msgstr "DPD (padrão)"
+
+msgid "Default"
+msgstr "Predefinido"
+
+msgid "Delete"
+msgstr "Eliminar"
+
+msgid "Delete this service?"
+msgstr "Eliminar este serviço?"
+
+msgid "Delivery speed"
+msgstr "Velocidade de entrega"
+
+msgid "Description"
+msgstr "Descrição"
+
+msgid "Direct GitHub releases (vendor / developer mode)."
+msgstr "Versões diretas do GitHub (modo fornecedor / programador)."
+
+msgid "Disabled"
+msgstr "Desativado"
+
+msgid "Distance tiers (radius)"
+msgstr "Escalões de distância (raio)"
+
+msgid "Edit"
+msgstr "Editar"
+
+msgid "Edit service"
+msgstr "Editar serviço"
+
+msgid "Enable or disable each feature module. Disabling a module hides all of its services and removes any fee it would add."
+msgstr "Ative ou desative cada módulo. Ao desativar um módulo, todos os seus serviços são ocultados e qualquer taxa que adicionaria é removida."
+
+msgid "Enabled"
+msgstr "Ativado"
+
+msgid "Enter the license key from your blocksocial.eu order. An active license enables one-click automatic updates straight from the official release channel."
+msgstr "Introduza a chave de licença da sua encomenda blocksocial.eu. Uma licença ativa permite atualizações automáticas com um clique a partir do canal oficial."
+
+msgid "Everyone"
+msgstr "Todos"
+
+msgid "Exclusive"
+msgstr "Exclusivo"
+
+msgid "Expired"
+msgstr "Expirada"
+
+msgid "Express & priority shipping"
+msgstr "Envio expresso e prioritário"
+
+msgid "Express delivery (1–2 days)"
+msgstr "Entrega expressa (1–2 dias)"
+
+msgid "Extra Services"
+msgstr "Serviços extra"
+
+msgid "Extra services"
+msgstr "Serviços extra"
+
+msgid "Fee"
+msgstr "Taxa"
+
+msgid "Fee type"
+msgstr "Tipo de taxa"
+
+msgid "Field label"
+msgstr "Etiqueta do campo"
+
+msgid "Flat"
+msgstr "Fixo"
+
+msgid "Flat amount"
+msgstr "Valor fixo"
+
+msgid "General settings"
+msgstr "Definições gerais"
+
+msgid "Geocoding endpoint"
+msgstr "Endpoint de geocodificação"
+
+msgid "Gift wrapping"
+msgstr "Embrulho para presente"
+
+msgid "Guest (not logged in)"
+msgstr "Convidado (sem sessão iniciada)"
+
+msgid "Hint"
+msgstr "Nota"
+
+msgid "Input type"
+msgstr "Tipo de entrada"
+
+msgid "Installed version"
+msgstr "Versão instalada"
+
+msgid "Insufficient permissions."
+msgstr "Permissões insuficientes."
+
+msgid "Invalid"
+msgstr "Inválida"
+
+msgid "Key"
+msgstr "Chave"
+
+msgid "Label"
+msgstr "Etiqueta"
+
+msgid "Leave all unchecked to show to everyone. Select roles to restrict this option to specific user groups (e.g. dropshipping / wholesale fees)."
+msgstr "Deixe tudo desmarcado para mostrar a todos. Selecione funções para restringir esta opção a determinados grupos de utilizadores (por ex. taxas de dropshipping / grossistas)."
+
+msgid "Let customers add gift wrapping for a fee, with an optional personal message."
+msgstr "Permita que os clientes adicionem embrulho para presente mediante uma taxa, com uma mensagem pessoal opcional."
+
+msgid "License & Updates"
+msgstr "Licença e atualizações"
+
+msgid "License & automatic updates"
+msgstr "Licença e atualizações automáticas"
+
+msgid "License key"
+msgstr "Chave de licença"
+
+msgid "License saved and validated."
+msgstr "Licença guardada e validada."
+
+msgid "License-gated updates via blocksocial.eu (recommended)."
+msgstr "Atualizações associadas à licença via blocksocial.eu (recomendado)."
+
+msgid "Licensing is not available."
+msgstr "A gestão de licenças não está disponível."
+
+msgid "Local delivery by distance"
+msgstr "Entrega local por distância"
+
+msgid "Local pickup"
+msgstr "Levantamento na loja"
+
+msgid "Local radius delivery"
+msgstr "Entrega em raio local"
+
+msgid "Local radius delivery — store origin"
+msgstr "Entrega em raio local — morada da loja"
+
+msgid "Max km"
+msgstr "Km máx."
+
+msgid "Message"
+msgstr "Mensagem"
+
+msgid "Message field"
+msgstr "Campo de mensagem"
+
+msgid "Module"
+msgstr "Módulo"
+
+msgid "Module settings saved."
+msgstr "Definições dos módulos guardadas."
+
+msgid "Modules"
+msgstr "Módulos"
+
+msgid "Modules & Settings"
+msgstr "Módulos e definições"
+
+msgid "No license key entered."
+msgstr "Nenhuma chave de licença introduzida."
+
+msgid "No services yet."
+msgstr "Ainda não há serviços."
+
+msgid "No update channel configured."
+msgstr "Nenhum canal de atualização configurado."
+
+msgid "Nominatim-compatible search endpoint. Respect the usage policy of whichever service you use."
+msgstr "Endpoint de pesquisa compatível com Nominatim. Respeite a política de utilização do serviço que usar."
+
+msgid "Not validated yet"
+msgstr "Ainda não validada"
+
+msgid "Offer faster delivery tiers (e.g. express / priority) against a surcharge."
+msgstr "Ofereça níveis de entrega mais rápidos (por ex. expresso / prioritário) mediante um suplemento."
+
+msgid "Offer store pickup as a selectable option, with or without a fee."
+msgstr "Ofereça o levantamento na loja como opção selecionável, com ou sem taxa."
+
+msgid "Optional but recommended."
+msgstr "Opcional mas recomendado."
+
+msgid "Optional note shown below the option (useful for distance-based delivery)."
+msgstr "Nota opcional mostrada abaixo da opção (útil para a entrega por distância)."
+
+msgid "Options / tiers"
+msgstr "Opções / escalões"
+
+msgid "Origin address"
+msgstr "Morada de origem"
+
+msgid "Origin lat / lng"
+msgstr "Lat / long de origem"
+
+msgid "Per item"
+msgstr "Por artigo"
+
+msgid "Percent"
+msgstr "Percentagem"
+
+msgid "Percent of subtotal"
+msgstr "Percentagem do subtotal"
+
+msgid "Pick up your order at our store — no shipping costs."
+msgstr "Levante a sua encomenda na nossa loja — sem custos de envio."
+
+msgid "Pick your preferred carrier where available."
+msgstr "Escolha a sua transportadora preferida quando disponível."
+
+msgid "Please enter your delivery address at checkout to see the delivery fee."
+msgstr "Introduza a sua morada de entrega na finalização para ver a taxa de entrega."
+
+msgid "Plugins"
+msgstr "Plugins"
+
+msgid "Preferred carrier"
+msgstr "Transportadora preferida"
+
+msgid "Roles"
+msgstr "Funções"
+
+msgid "Save & validate license"
+msgstr "Guardar e validar a licença"
+
+msgid "Save changes"
+msgstr "Guardar alterações"
+
+msgid "Save service"
+msgstr "Guardar serviço"
+
+msgid "See the release notes on blocksocial.eu."
+msgstr "Consulte as notas de lançamento em blocksocial.eu."
+
+msgid "Selecting this option deactivates all other services (e.g. local delivery)"
+msgstr "Selecionar esta opção desativa todos os outros serviços (por ex. entrega local)"
+
+msgid "Selecting this option removes all shipping costs (e.g. local pickup / local delivery)"
+msgstr "Selecionar esta opção remove todos os custos de envio (por ex. levantamento / entrega local)"
+
+msgid "Service"
+msgstr "Serviço"
+
+msgid "Service deleted."
+msgstr "Serviço eliminado."
+
+msgid "Service saved."
+msgstr "Serviço guardado."
+
+msgid "Services"
+msgstr "Serviços"
+
+msgid "Settings"
+msgstr "Definições"
+
+msgid "Shipping"
+msgstr "Envio"
+
+msgid "Show services on"
+msgstr "Mostrar os serviços em"
+
+msgid "Sort order"
+msgstr "Ordem de ordenação"
+
+msgid "Standard"
+msgstr "Padrão"
+
+msgid "Standard delivery"
+msgstr "Entrega padrão"
+
+msgid "Status"
+msgstr "Estado"
+
+msgid "Tax"
+msgstr "Imposto"
+
+msgid "Title"
+msgstr "Título"
+
+msgid "Type"
+msgstr "Tipo"
+
+msgid "Untitled service"
+msgstr "Serviço sem título"
+
+msgid "Up to 10 km"
+msgstr "Até 10 km"
+
+msgid "Up to 20 km"
+msgstr "Até 20 km"
+
+msgid "Up to 5 km"
+msgstr "Até 5 km"
+
+msgid "Update channel"
+msgstr "Canal de atualização"
+
+msgid "Updates appear on the %s screen once a newer release is published."
+msgstr "As atualizações aparecem no ecrã %s assim que uma versão mais recente é publicada."
+
+msgid "Used by the Local radius delivery module. Provide either coordinates (most reliable) or an address to geocode."
+msgstr "Utilizado pelo módulo de entrega em raio local. Forneça coordenadas (mais fiável) ou uma morada para geocodificar."
+
+msgid "Used for the checkbox type. Negative values act as a discount."
+msgstr "Utilizado para o tipo caixa de seleção. Os valores negativos funcionam como um desconto."
+
+msgid "Valid until"
+msgstr "Válida até"
+
+msgid "Visible to roles"
+msgstr "Visível para as funções"
+
+msgid "We deliver locally. The fee depends on the distance to your address."
+msgstr "Entregamos localmente. A taxa depende da distância até à sua morada."
+
+msgid "We will wrap your order as a gift."
+msgstr "Embrulharemos a sua encomenda como presente."
+
+msgid "When selected at checkout, shipping rates are replaced by a single free option. Any fee configured above still applies."
+msgstr "Quando selecionada na finalização, as tarifas de envio são substituídas por uma única opção gratuita. Qualquer taxa configurada acima continua a aplicar-se."
+
+msgid "Which module this service belongs to. It only shows when that module is enabled."
+msgstr "O módulo a que este serviço pertence. Só é mostrado quando esse módulo está ativado."
+
+msgid "Yes, add this"
+msgstr "Sim, adicionar"
+
+msgid "Yes, deliver to my address"
+msgstr "Sim, entregar na minha morada"
+
+msgid "You do not have permission to access this page."
+msgstr "Não tem permissão para aceder a esta página."
+
+msgid "Your gift message (optional)"
+msgstr "A sua mensagem de presente (opcional)"
+
+msgid "e.g. Please enter your address to see the fee"
+msgstr "por ex. Introduza a sua morada para ver a taxa"
+
+msgid "fee based on distance"
+msgstr "taxa com base na distância"
+
+msgid "free"
+msgstr "grátis"
+
+msgid "longitude"
+msgstr "longitude"
+
+msgid "module off"
+msgstr "módulo desativado"
+
+msgid "per item"
+msgstr "por artigo"
+

@@ -1,0 +1,111 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: BlockSocial Extra Services Lite 1.0.0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_PT\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "BlockSocial Extra Services Lite requires WooCommerce to be installed and active."
+msgstr "O BlockSocial Extra Services Lite requer que o WooCommerce esteja instalado e ativo."
+
+msgid "BlockSocial Extra Services Pro adds express & priority tiers, carrier choice (DHL instead of DPD), distance-based local delivery, unlimited custom services, per-role fees (e.g. dropshipping) and automatic updates."
+msgstr "O BlockSocial Extra Services Pro adiciona níveis expresso e prioritário, escolha da transportadora (DHL em vez de DPD), entrega local por distância, serviços personalizados ilimitados, taxas por função (por ex. dropshipping) e atualizações automáticas."
+
+msgid "BlockSocial — Extra Services (Lite)"
+msgstr "BlockSocial — Serviços extra (Lite)"
+
+msgid "Both cart and checkout"
+msgstr "Carrinho e finalização"
+
+msgid "Cart page"
+msgstr "Página do carrinho"
+
+msgid "Charge tax on this fee"
+msgstr "Aplicar imposto a esta taxa"
+
+msgid "Checkout page"
+msgstr "Página de finalização"
+
+msgid "Collect a gift message"
+msgstr "Recolher uma mensagem de presente"
+
+msgid "Description"
+msgstr "Descrição"
+
+msgid "Enable"
+msgstr "Ativar"
+
+msgid "Extra Services"
+msgstr "Serviços extra"
+
+msgid "Extra Services Lite"
+msgstr "Serviços extra Lite"
+
+msgid "Extra services"
+msgstr "Serviços extra"
+
+msgid "Fee"
+msgstr "Taxa"
+
+msgid "General"
+msgstr "Geral"
+
+msgid "Gift wrapping"
+msgstr "Embrulho para presente"
+
+msgid "Insufficient permissions."
+msgstr "Permissões insuficientes."
+
+msgid "Local pickup"
+msgstr "Levantamento na loja"
+
+msgid "Message"
+msgstr "Mensagem"
+
+msgid "Message field label"
+msgstr "Etiqueta do campo de mensagem"
+
+msgid "Need more?"
+msgstr "Precisa de mais?"
+
+msgid "Pick up your order at our store — no shipping costs."
+msgstr "Levante a sua encomenda na nossa loja — sem custos de envio."
+
+msgid "Save changes"
+msgstr "Guardar alterações"
+
+msgid "Settings"
+msgstr "Definições"
+
+msgid "Settings saved."
+msgstr "Definições guardadas."
+
+msgid "Show services on"
+msgstr "Mostrar os serviços em"
+
+msgid "Title"
+msgstr "Título"
+
+msgid "Upgrade to Pro"
+msgstr "Mudar para Pro"
+
+msgid "We will wrap your order as a gift."
+msgstr "Embrulharemos a sua encomenda como presente."
+
+msgid "When pickup is selected, the normal shipping cost is set to zero."
+msgstr "Quando o levantamento é selecionado, os custos de envio normais são definidos como zero."
+
+msgid "Yes, add this"
+msgstr "Sim, adicionar"
+
+msgid "You do not have permission to access this page."
+msgstr "Não tem permissão para aceder a esta página."
+
+msgid "Your gift message (optional)"
+msgstr "A sua mensagem de presente (opcional)"
+
+msgid "free"
+msgstr "grátis"
+

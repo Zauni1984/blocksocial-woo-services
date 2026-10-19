@@ -1,6 +1,7 @@
 # Files kept in the (private) repo but excluded from the customer ZIP built
-# with `git archive` (the distributable plugin package).
+# with `git archive` (the distributable Pro plugin package).
 docs/server/           export-ignore
 docs/SALES-KIT.md      export-ignore
+free/                  export-ignore
 .gitattributes         export-ignore
 .github/               export-ignore

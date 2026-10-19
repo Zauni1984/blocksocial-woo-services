@@ -59,8 +59,9 @@ Built by BlockSocial UG (haftungsbeschränkt).
 = Which languages are included? =
 
 The plugin ships with a translation template (languages/bwes.pot) and complete
-German, French and Italian translations. It follows your WordPress site
-language automatically. Built-in service labels are localized as well.
+translations for German, French, Italian, Spanish, Dutch, Portuguese and Polish
+(English is the source language). It follows your WordPress site language
+automatically, and built-in service labels are localized as well.
 
 = How is the local delivery distance calculated? =
 
@@ -79,6 +80,8 @@ or pick specific roles (including the virtual "Guest" role).
 * Automatic updates: licence-gated auto-updates delivered from GitHub releases
   through a vendor proxy (blocksocial.eu), with an optional direct-GitHub mode
   for the vendor's own sites. New "License & Updates" admin tab.
+* Languages: added Spanish, Dutch, Portuguese and Polish (now 7 locales plus
+  English), covering the new licensing strings too.
 * Added full documentation set under /docs (user guide with screenshots, sales
   kit with pricing, EULA, and the server-side update proxy reference).
 

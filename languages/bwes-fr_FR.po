@@ -1,16 +1,12 @@
-# Translation of BlockSocial WooCommerce Extra Services.
-# Copyright (C) 2026 BlockSocial UG (haftungsbeschraenkt)
-# This file is distributed under the MIT license.
 msgid ""
 msgstr ""
-"Project-Id-Version: BlockSocial WooCommerce Extra Services 1.2.0\n"
-"Report-Msgid-Bugs-To: https://blocksocial.de\n"
+"Project-Id-Version: BlockSocial WooCommerce Extra Services 1.3.0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: French\n"
+"Language: fr_FR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Domain: bwes\n"
+
 msgid "%d option"
 msgid_plural "%d options"
 msgstr[0] "%d option"
@@ -18,6 +14,9 @@ msgstr[1] "%d options"
 
 msgid "Actions"
 msgstr "Actions"
+
+msgid "Active"
+msgstr "Active"
 
 msgid "Add custom service"
 msgstr "Ajouter un service personnalisé"
@@ -70,6 +69,12 @@ msgstr "Choisissez la rapidité de livraison souhaitée."
 msgid "Collect a message from the customer"
 msgstr "Recueillir un message du client"
 
+msgid "Could not prepare the update package."
+msgstr "Impossible de préparer le paquet de mise à jour."
+
+msgid "Could not reach the license server. Will retry later."
+msgstr "Serveur de licences injoignable. Nouvel essai plus tard."
+
 msgid "Create service"
 msgstr "Créer le service"
 
@@ -100,6 +105,9 @@ msgstr "Vitesse de livraison"
 msgid "Description"
 msgstr "Description"
 
+msgid "Direct GitHub releases (vendor / developer mode)."
+msgstr "Versions GitHub directes (mode fournisseur / développeur)."
+
 msgid "Disabled"
 msgstr "Désactivé"
 
@@ -118,11 +126,17 @@ msgstr "Activez ou désactivez chaque module. Désactiver un module masque tous 
 msgid "Enabled"
 msgstr "Activé"
 
+msgid "Enter the license key from your blocksocial.eu order. An active license enables one-click automatic updates straight from the official release channel."
+msgstr "Saisissez la clé de licence de votre commande blocksocial.eu. Une licence active permet les mises à jour automatiques en un clic depuis le canal officiel."
+
 msgid "Everyone"
 msgstr "Tout le monde"
 
 msgid "Exclusive"
 msgstr "Exclusif"
+
+msgid "Expired"
+msgstr "Expirée"
 
 msgid "Express & priority shipping"
 msgstr "Expédition express et prioritaire"
@@ -169,8 +183,14 @@ msgstr "Remarque"
 msgid "Input type"
 msgstr "Type de saisie"
 
+msgid "Installed version"
+msgstr "Version installée"
+
 msgid "Insufficient permissions."
 msgstr "Autorisations insuffisantes."
+
+msgid "Invalid"
+msgstr "Invalide"
 
 msgid "Key"
 msgstr "Clé"
@@ -183,6 +203,24 @@ msgstr "Laissez tout décoché pour afficher à tous. Sélectionnez des rôles p
 
 msgid "Let customers add gift wrapping for a fee, with an optional personal message."
 msgstr "Permettez aux clients d’ajouter un emballage cadeau moyennant des frais, avec un message personnel facultatif."
+
+msgid "License & Updates"
+msgstr "Licence et mises à jour"
+
+msgid "License & automatic updates"
+msgstr "Licence et mises à jour automatiques"
+
+msgid "License key"
+msgstr "Clé de licence"
+
+msgid "License saved and validated."
+msgstr "Licence enregistrée et validée."
+
+msgid "License-gated updates via blocksocial.eu (recommended)."
+msgstr "Mises à jour sous licence via blocksocial.eu (recommandé)."
+
+msgid "Licensing is not available."
+msgstr "La gestion des licences n’est pas disponible."
 
 msgid "Local delivery by distance"
 msgstr "Livraison locale selon la distance"
@@ -217,11 +255,20 @@ msgstr "Modules"
 msgid "Modules & Settings"
 msgstr "Modules et réglages"
 
+msgid "No license key entered."
+msgstr "Aucune clé de licence saisie."
+
 msgid "No services yet."
 msgstr "Aucun service pour l’instant."
 
+msgid "No update channel configured."
+msgstr "Aucun canal de mise à jour configuré."
+
 msgid "Nominatim-compatible search endpoint. Respect the usage policy of whichever service you use."
 msgstr "Point d’accès de recherche compatible Nominatim. Respectez les conditions d’utilisation du service que vous utilisez."
+
+msgid "Not validated yet"
+msgstr "Pas encore validée"
 
 msgid "Offer faster delivery tiers (e.g. express / priority) against a surcharge."
 msgstr "Proposez des niveaux de livraison plus rapides (par ex. express / prioritaire) moyennant un supplément."
@@ -262,17 +309,26 @@ msgstr "Choisissez votre transporteur préféré lorsqu’il est disponible."
 msgid "Please enter your delivery address at checkout to see the delivery fee."
 msgstr "Veuillez saisir votre adresse de livraison lors de la commande pour voir les frais de livraison."
 
+msgid "Plugins"
+msgstr "Extensions"
+
 msgid "Preferred carrier"
 msgstr "Transporteur préféré"
 
 msgid "Roles"
 msgstr "Rôles"
 
+msgid "Save & validate license"
+msgstr "Enregistrer et valider la licence"
+
 msgid "Save changes"
 msgstr "Enregistrer les modifications"
 
 msgid "Save service"
 msgstr "Enregistrer le service"
+
+msgid "See the release notes on blocksocial.eu."
+msgstr "Consultez les notes de version sur blocksocial.eu."
 
 msgid "Selecting this option deactivates all other services (e.g. local delivery)"
 msgstr "Sélectionner cette option désactive tous les autres services (par ex. livraison locale)"
@@ -334,11 +390,20 @@ msgstr "Jusqu’à 20 km"
 msgid "Up to 5 km"
 msgstr "Jusqu’à 5 km"
 
+msgid "Update channel"
+msgstr "Canal de mise à jour"
+
+msgid "Updates appear on the %s screen once a newer release is published."
+msgstr "Les mises à jour apparaissent sur l’écran %s dès qu’une nouvelle version est publiée."
+
 msgid "Used by the Local radius delivery module. Provide either coordinates (most reliable) or an address to geocode."
 msgstr "Utilisé par le module de livraison dans un rayon local. Fournissez soit des coordonnées (le plus fiable), soit une adresse à géocoder."
 
 msgid "Used for the checkbox type. Negative values act as a discount."
 msgstr "Utilisé pour le type case à cocher. Les valeurs négatives agissent comme une remise."
+
+msgid "Valid until"
+msgstr "Valable jusqu’au"
 
 msgid "Visible to roles"
 msgstr "Visible pour les rôles"
